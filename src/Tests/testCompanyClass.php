@@ -1,6 +1,6 @@
 <?php
 
-include '../Classes/CompanyClass.php';
+include __DIR__ . '/../Classes/CompanyClass.php';
 
 use Classes\CompanyClass;
 
@@ -20,4 +20,15 @@ $input3 = [
     'website' => '<HIDDEN INPUT> '
 ];
 
-$testCases = [$input1, $input2, $input3];
+// Run tests
+echo "Testing input 1:\n";
+$result1 = $company->normalizeCompanyData($input1);
+var_dump($result1);
+
+echo "\nTesting input 2:\n";
+$result2 = $company->normalizeCompanyData($input2);
+var_dump($result2);
+
+echo "\nTesting input 3:\n";
+$result3 = $company->normalizeCompanyData($input3);
+var_dump($result3);
